@@ -16,13 +16,16 @@ toggle.addEventListener('click', function (e) {
 const notif__btn = document.querySelector(".header__notification");
 const notif__closebtn = document.querySelector(".notification .closebtn");
 const notif__block = document.querySelector(".notification__body");
+const notif__block2 = document.querySelector(".notification");
 
 notif__btn.addEventListener("click", () => {
     notif__block.classList.add("active");
+    notif__block2.classList.add("active");
 })
 
 notif__closebtn.addEventListener("click", () => {
     notif__block.classList.remove("active");
+    notif__block2.classList.remove("active");
 })
 
 
@@ -34,6 +37,7 @@ document.addEventListener('click', e => {
 
     if (!its_block && !its_btn && block_is_active) {
         notif__block.classList.remove("active");
+        notif__block2.classList.remove("active");
     }
 })
 
@@ -41,13 +45,16 @@ document.addEventListener('click', e => {
 const wallet__btn = document.querySelector(".header__wallet");
 const wallet__closebtn = document.querySelector(".wallet .closebtn");
 const wallet__block = document.querySelector(".wallet__body");
+const wallet__block2 = document.querySelector(".wallet");
 
 wallet__btn.addEventListener("click", () => {
     wallet__block.classList.add("active");
+    wallet__block2.classList.add("active");
 })
 
 wallet__closebtn.addEventListener("click", () => {
     wallet__block.classList.remove("active");
+    wallet__block2.classList.remove("active");
 })
 
 
@@ -59,6 +66,7 @@ document.addEventListener('click', e => {
 
     if (!its_block && !its_btn && block_is_active) {
         wallet__block.classList.remove("active");
+        wallet__block2.classList.remove("active");
     }
 })
 ///////////////// кошелек и уведомления /////////////////////

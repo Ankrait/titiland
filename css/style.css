@@ -241,9 +241,19 @@ video {
   white-space: nowrap;
 }
 
+.btn:hover {
+  background: #106ffd;
+  box-shadow: 0px 0px 8px #106ffd;
+}
+
 .btn-grey {
   background: #393E45;
   box-shadow: 0px 0px 8px #393E45;
+}
+
+.btn-grey:hover {
+  background: #46494e;
+  box-shadow: 0px 0px 8px #46494e;
 }
 
 .closebtn {
@@ -297,6 +307,7 @@ video {
 
 .wrapper {
   min-height: 100%;
+  margin-left: calc(100vw - 100%);
 }
 
 .main {
@@ -322,6 +333,7 @@ video {
 */
 /*///////////////////////// Хедр /////////////////////////*/
 .header {
+  margin-left: calc(100vw - 100%);
   position: fixed;
   z-index: 5;
   top: 0;
@@ -505,6 +517,7 @@ video {
   bottom: 0;
   left: 0;
   width: 100%;
+  margin-left: calc(100vw - 100%);
 }
 
 .footer__container {
@@ -596,7 +609,7 @@ video {
   flex-direction: column;
   align-items: center;
 
-  background: rgba(5, 5, 12, 0.9);
+  background: rgba(5, 5, 12, 0.98);
   border-radius: 20px;
 }
 
@@ -660,7 +673,7 @@ video {
   top: 50%;
   transform: translate(-50%, -50%);
 
-  background: rgba(5, 5, 12, 0.9);
+  background: rgba(5, 5, 12, 0.98);
   border-radius: 20px;
   padding: 30px;
   width: min(410px, 100%);
@@ -794,7 +807,7 @@ video {
   top: 50%;
   transform: translate(-50%, -50%);
 
-  background: rgba(5, 5, 12, 0.9);
+  background: rgba(5, 5, 12, 0.98);
   border-radius: 20px;
   padding: 30px;
   width: min(543px, 100%);
@@ -850,10 +863,12 @@ video {
 
 .price-nft-card {
   display: flex;
-  gap: 32px;
+  flex-wrap: wrap;
 }
 
-.price-nft-card__item {}
+.price-nft-card__item:first-child {
+  margin: 0 32px 15px 0;
+}
 
 .price-nft-card__value {
   font-weight: 700;
@@ -927,6 +942,10 @@ video {
   margin: 12px 0 0 0;
 }
 
+.my .nft-card__status {
+  background: #0066FF;
+}
+
 /*///////////////////////// Карточка продукта /////////////////////////*/
 /*
 //
@@ -935,7 +954,7 @@ video {
 .minting {
   width: min(610px, 100%);
   padding: 60px 0;
-  background: rgba(5, 5, 12, 0.9);
+  background: rgba(5, 5, 12, 0.98);
   border-radius: 20px;
 
   position: absolute;
@@ -1123,7 +1142,7 @@ video {
   visibility: hidden;
   transition: transform 0.5s linear, visibility 0.5s ease;
 
-  background: rgba(5, 5, 12, 0.9);
+  background: rgba(5, 5, 12, 0.98);
   border-radius: 20px;
 
   overflow: hidden;
@@ -1190,6 +1209,7 @@ video {
   right: 15px;
   width: 352px;
   height: 100px;
+  pointer-events: none;
 }
 
 .notification__body {
@@ -1199,7 +1219,7 @@ video {
 
   position: fixed;
 
-  background: rgba(5, 5, 12, 0.9);
+  background: rgba(5, 5, 12, 0.98);
   border-radius: 20px;
 
   display: flex;
@@ -1209,6 +1229,13 @@ video {
   transition: transform 0.5s linear, visibility 0.5s ease;
 
   overflow: hidden;
+}
+
+.notification .active,
+.wallet .active {
+  transform: translateX(0);
+  visibility: visible;
+  pointer-events: all;
 }
 
 .notification__title {
@@ -1224,7 +1251,7 @@ video {
   flex-direction: column;
   flex-wrap: wrap;
   flex: 1 1 auto;
-  overflow: auto;
+  overflow: hidden;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -1323,12 +1350,6 @@ video {
   .notification__name {
     font-size: 16px;
   }
-}
-
-.notification .active,
-.wallet .active {
-  transform: translateX(0);
-  visibility: visible;
 }
 
 /*///////////////////////// Уведомления /////////////////////////*/
@@ -1501,6 +1522,10 @@ video {
   color: #787878;
 }
 
+.p-menu__item:not(.active):hover {
+  color: #BABABA;
+}
+
 .p-menu__item.active {
   color: #FCFCFC;
   border-bottom: 2px solid #FCFCFC;
@@ -1607,10 +1632,11 @@ video {
   height: 6px;
   position: relative;
   transition: all 0.4s ease;
+  transform: rotate(-90deg);
 }
 
 .filter__btn.active span {
-  transform: rotate(90deg);
+  transform: rotate(0);
 }
 
 .filter__btn span::after {
@@ -1925,7 +1951,7 @@ input[type="range"]::-moz-range-thumb {
   width: 14px;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%) rotate(90deg);
+  transform: translateY(-50%) rotate(-90deg);
   right: 16px;
   transition: transform 0.3s ease;
 }
@@ -1964,7 +1990,7 @@ input[type="range"]::-moz-range-thumb {
   cursor: pointer;
   height: 100%;
   width: 100%;
-  
+
   display: flex;
   align-items: center;
 }
@@ -2291,7 +2317,7 @@ input[type="range"]::-moz-range-thumb {
   align-items: start;
 }
 
-.p-notification__input {
+.p-notification__input:not(:first-child) {
   margin: 20px 0 0 0;
 }
 

@@ -27,7 +27,7 @@
                <a class="menu__item" href="titifund.html">TitiFund</a>
                <a class="menu__item" href="#">Whitepaper</a>
             </div>
-            <button class="header__button btn" style="display: none;">
+            <button class="header__button btn dn" >
                Подключить кошелек
             </button>
             <div class="header__icons">
@@ -41,6 +41,7 @@
                <a class="header__wallet">
                   <img src="img/wallet.svg" alt="">
                </a>
+
             </div>
             <div class="burger">
                <span class="bar-top"></span>
@@ -113,14 +114,27 @@
                   <div class="notification__button btn btn-grey">Посмотреть все</div>
                </div>
             </div>
+            <button class="btn registr">registr</button>
+            <button class="btn collect">collection</button>
+            <button class="btn nft">nft-card</button>
+            <button class="btn sale">sale</button>
+            <button class="btn bought">bought</button>
+            <button class="btn my">my</button>
+            <button class="btn mint">minting</button>
+            <button class="btn warn">warn</button>
+            <style>
+               .main__container .btn {
+                  margin: 200px 20px 0 0;
+               }
+            </style>
          </div>
-         <div class="registration" style="display: none;">
+         <div class="registration dn" >
             <div class="registration__title">Добро пожаловать!</div>
             <input type="text" name="nick" class="registration__nick" placeholder="Введите никнейм">
             <input type="text" name="email" class="registration__email" placeholder="Введите электронную почту">
             <button class="registration__button btn">Завершить регистрацию</button>
          </div>
-         <div class="collection" style="display: none;">
+         <div class="collection dn" >
             <span class="closebtn"></span>
             <div class="collection__image bg-image">
                <img src="img/nft.png" alt="">
@@ -147,7 +161,7 @@
             </div>
             <div class="collection__button btn">Заминтить</div>
          </div>
-         <div class="nft-card" style="display: none;">
+         <div class="nft-card dn" >
             <div class="closebtn"></div>
             <div class="nft-card__info">
                <div class="nft-card__status">Свободна</div>
@@ -165,7 +179,7 @@
                <img src="img/nft.png" alt="">
             </div>
          </div>
-         <div class="nft-card sale" style="display: none;">
+         <div class="nft-card sale dn" >
             <div class="closebtn"></div>
             <div class="nft-card__info">
                <div class="nft-card__status">На продаже</div>
@@ -183,7 +197,7 @@
                <img src="img/nft.png" alt="">
             </div>
          </div>
-         <div class="nft-card bought" style="display: none;">
+         <div class="nft-card bought dn" >
             <div class="closebtn"></div>
             <div class="nft-card__info">
                <div class="nft-card__status">Куплена</div>
@@ -196,7 +210,29 @@
                <img src="img/nft.png" alt="">
             </div>
          </div>
-         <div class="minting" style="display: none;">
+         <div class="nft-card my dn">
+            <div class="closebtn"></div>
+            <div class="nft-card__info">
+               <div class="nft-card__status">Мой NFT</div>
+               <div class="nft-card__name">Название NFT</div>
+               <div class="nft-card__collection">Название коллекции</div>
+               <div class="nft-card__price price-nft-card">
+                  <div class="price-nft-card__item">
+                     <div class="price-nft-card__value">$ 10</div>
+                     <div class="price-nft-card__description">За сколько куплена</div>
+                  </div>
+                  <div class="price-nft-card__item">
+                     <div class="price-nft-card__value">$ 15</div>
+                     <div class="price-nft-card__description">Цена на рынке</div>
+                  </div>
+               </div>
+               <div class="nft-card__button btn btn-grey">Перейти к продаже</div>
+            </div>
+            <div class="nft-card__image bg-image">
+               <img src="img/nft.png" alt="">
+            </div>
+         </div>
+         <div class="minting dn" >
             <div class="closebtn"></div>
             <div class="minting__container">
                <div class="minting__title">
@@ -223,7 +259,7 @@
                </div>
             </div>
          </div>
-         <div class="warning" style="display: none;">
+         <div class="warning dn" >
             <img src="img/warning.svg" alt="">
             <span>Что-то пошло не так</span>
          </div>
@@ -247,5 +283,6 @@
    </div>
 </body>
 <script src="js/script.js"></script>
+<script src="js/open.js"></script>
 
 </html>
