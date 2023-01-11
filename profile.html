@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titiland</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="tf">
+    <div class="wrapper tf">
+        <header class="header">
+            <div class="header__container">
+                <a class="header__logo logo" href="#">
+                    <div class="logo__image">
+                        <img src="img/logo.svg" alt="Лого">
+                    </div>
+                    <div class="logo__name">
+                        Titiland
+                    </div>
+                </a>
+                <div class="header__menu menu">
+                    <a class="menu__item active" href="/">Zoom Loupe</a>
+                    <a class="menu__item" href="#">MarketPlace</a>
+                    <a class="menu__item" href="titifund.html">TitiFund</a>
+                    <a class="menu__item" href="#">Whitepaper</a>
+                </div>
+                <div class="header__icons">
+                    <a class="header__notification">
+                        <img src="img/notification.svg" alt="">
+                        <span>4</span>
+                    </a>
+                    <a class="header__user">
+                        <img src="img/user.svg" alt="">
+                    </a>
+                    <a class="header__wallet">
+                        <img src="img/wallet.svg" alt="">
+                    </a>
+                </div>
+                <div class="burger">
+                    <span class="bar-top"></span>
+                    <span class="bar-mid"></span>
+                    <span class="bar-bot"></span>
+                </div>
+            </div>
+        </header>
+        <main class="main-profile">
+            <div class="main__container">
+                <div class="wallet">
+                    <div class="wallet__body">
+                        <div class="closebtn"></div>
+                        <div class="wallet__title">Мой кошелек</div>
+                        <div class="wallet__number">0xe1C...B3F5</div>
+                        <div class="wallet__value">$0,00 USD</div>
+                        <div class="wallet__button btn">Пополнить баланс</div>
+                        <div class="wallet__button btn btn-grey">Выйти из кошелька</div>
+                    </div>
+                </div>
+                <div class="notification">
+                    <div class="notification__body">
+                        <div class="closebtn"></div>
+                        <div class="notification__title">Уведомления</div>
+                        <div class="notification__items">
+                            <div class="notification__null">
+                                У вас нет<br> уведомлений
+                            </div>
+                            <div class="notification__item">
+                                <div class="notification__name">
+                                    Запрос на покупку NFT
+                                </div>
+                                <div class="notification__description">
+                                    Вам поступило предложение о покупке NFT из вашей коллекции “Название NFT”.
+                                </div>
+                            </div>
+                            <div class="notification__item">
+                                <div class="notification__name">
+                                    Запрос отклонен
+                                </div>
+                                <div class="notification__description">
+                                    Владелец “Название NFT” отклонил предложение
+                                </div>
+                            </div>
+                            <div class="notification__item">
+                                <div class="notification__name">
+                                    Запрос отклонен
+                                </div>
+                                <div class="notification__description">
+                                    Владелец “Название NFT” отклонил предложение
+                                </div>
+                            </div>
+                            <div class="notification__item">
+                                <div class="notification__name">
+                                    Вы купили NFT
+                                </div>
+                                <div class="notification__description">
+                                    Поздравляем! Вы купили “Название NFT”.
+                                </div>
+                            </div>
+                            <div class="notification__item">
+                                <div class="notification__name">
+                                    Вы продали NFT
+                                </div>
+                                <div class="notification__description">
+                                    Поздравляем! Вы продали “Название NFT” за $100.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="notification__button btn btn-grey">Посмотреть все</div>
+                    </div>
+                </div>
+                <div class="profile">
+                    <div class="profile__image">
+                        <img src="img/profile.png" alt="">
+                    </div>
+                    <div class="profile__info">
+                        <div class="profile__name">
+                            Mr.Banan
+                        </div>
+                        <div class="profile__email">
+                            Bananik@google.com
+                        </div>
+                        <div class="profile__button btn btn-grey">
+                            Редактировать профиль
+                        </div>
+                    </div>
+                </div>
+                <ul class="p-menu">
+                    <li class="p-menu__item edit dn">Редактирование профиля</li>
+                    <li class="p-menu__item invent active">Мои владения</li>
+                    <li class="p-menu__item notif">Уведомления</li>
+                </ul>
+                <div class="content">
+                    <div class="inventory">
+                        <div class="filter__bg"></div>
+                        <div class="inventory__filter filter">
+                            <div class="filter__title">Фильтры</div>
+                            <div class="closebtn"></div>
+                            <div class="filter__price">
+                                <div class="filter__btn active">
+                                    <p>Цена покупки</p>
+                                    <span></span>
+                                </div>
+                                <div class="filter__item active">
+                                    <div class="filter__input">
+                                        <div>
+                                            <input type="number" min="0" max="1000" value="0"
+                                                class="filter__price--min">
+                                        </div>
+                                        <span class="input-line"></span>
+                                        <div>
+                                            <input type="number" min="0" max="1000" value="1000"
+                                                class="filter__price--max">
+                                        </div>
+                                    </div>
+                                    <div class="filter__slider">
+                                        <div class="filter__slider-progress">
+                                        </div>
+                                        <div class="filter__slider--range">
+                                            <input type="range" class="max-value" value="0" min="0" max="1000">
+                                            <input type="range" class="min-value" value="1000" min="0" max="1000">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter__type-nft">
+                                <div class="filter__btn active">
+                                    <p>Вид NFT</p>
+                                    <span></span>
+                                </div>
+                                <div class="filter__item active">
+                                    <div class="filter__checkbox">
+                                        <div class="checkbox-item">
+                                            <input type="checkbox" name="type-nft" id="water">
+                                            <label for="water">NFT воды</label>
+                                        </div>
+                                        <div class="checkbox-item">
+                                            <input type="checkbox" name="type-nft" id="land">
+                                            <label for="land">NFT суши</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter__collection">
+                                <div class="filter__btn active">
+                                    <p>Коллекция</p>
+                                    <span></span>
+                                </div>
+                                <div class="filter__item active">
+                                    <div class="filter__checkbox">
+                                        <div class="checkbox-item">
+                                            <input type="checkbox" name="collection" id="collection1">
+                                            <label for="collection1">NFT</label>
+                                        </div>
+                                        <div class="checkbox-item">
+                                            <input type="checkbox" name="collection" id="collection2">
+                                            <label for="collection2">NFT</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter__clear"><span>Очистить</span></div>
+
+                        </div>
+                        <div class="inventory__sort sort">
+                            <div class="sort__search">
+                                <span>
+                                    <img src="img/search.svg" alt="">
+                                </span>
+                                <input type="text" class="input__search" placeholder="Поиск">
+                            </div>
+                            <div class="sort__by by-sort">
+                                <div class="by-sort__main">Сначала новые</div>
+                                <span></span>
+                                <div class="by-sort__menu">
+                                    <div class="by-sort__item active">Сначала новые</div>
+                                    <div class="by-sort__item">Сначала старые</div>
+                                    <div class="by-sort__item">Сначала дешевые</div>
+                                    <div class="by-sort__item">Сначала дорогие</div>
+                                </div>
+                            </div>
+                            <div class="sort__filter">Фильтр</div>
+                            <div class="sort__size">
+                                <div class="sort__size-big active">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="sort__size-small">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="inventory__items">
+                            <div class="inventory__item item-inventory">
+                                <div class="item-inventory__image bg-image">
+                                    <img src="img/nft.png" alt="">
+                                </div>
+                                <div class="item-inventory__name">
+                                    Название NFT
+                                </div>
+                                <div class="item-inventory__collection">
+                                    Название коллекции
+                                </div>
+                                <div class="item-inventory__price">
+                                    <div class="item-inventory__bought">
+                                        <div class="item-inventory__value">$ 10</div>
+                                        <div class="item-inventory__discription">За сколько куплена</div>
+                                    </div>
+                                    <div class="item-inventory__now">
+                                        <div class="item-inventory__value">$ 15</div>
+                                        <div class="item-inventory__discription">Цена на рынке</div>
+                                    </div>
+                                </div>
+                                <div class="item-inventory__button btn btn-grey">Перейти к продаже</div>
+                            </div>
+                            <div class="inventory__item item-inventory">
+                                <div class="item-inventory__image bg-image">
+                                    <img src="img/nft.png" alt="">
+                                </div>
+                                <div class="item-inventory__name">
+                                    Название NFT
+                                </div>
+                                <div class="item-inventory__collection">
+                                    Название коллекции
+                                </div>
+                                <div class="item-inventory__price">
+                                    <div class="item-inventory__bought">
+                                        <div class="item-inventory__value">$ 10</div>
+                                        <div class="item-inventory__discription">За сколько куплена</div>
+                                    </div>
+                                    <div class="item-inventory__now">
+                                        <div class="item-inventory__value">$ 15</div>
+                                        <div class="item-inventory__discription">Цена на рынке</div>
+                                    </div>
+                                </div>
+                                <div class="item-inventory__button btn btn-grey">Перейти к продаже</div>
+                            </div>
+                            <div class="inventory__item item-inventory">
+                                <div class="item-inventory__image bg-image">
+                                    <img src="img/nft.png" alt="">
+                                </div>
+                                <div class="item-inventory__name">
+                                    Название NFT
+                                </div>
+                                <div class="item-inventory__collection">
+                                    Название коллекции
+                                </div>
+                                <div class="item-inventory__price">
+                                    <div class="item-inventory__bought">
+                                        <div class="item-inventory__value">$ 10</div>
+                                        <div class="item-inventory__discription">За сколько куплена</div>
+                                    </div>
+                                    <div class="item-inventory__now">
+                                        <div class="item-inventory__value">$ 15</div>
+                                        <div class="item-inventory__discription">Цена на рынке</div>
+                                    </div>
+                                </div>
+                                <div class="item-inventory__button btn btn-grey">Перейти к продаже</div>
+                            </div>
+                            <div class="inventory__item item-inventory">
+                                <div class="item-inventory__image bg-image">
+                                    <img src="img/nft.png" alt="">
+                                </div>
+                                <div class="item-inventory__name">
+                                    Название NFT
+                                </div>
+                                <div class="item-inventory__collection">
+                                    Название коллекции
+                                </div>
+                                <div class="item-inventory__price">
+                                    <div class="item-inventory__bought">
+                                        <div class="item-inventory__value">$ 10</div>
+                                        <div class="item-inventory__discription">За сколько куплена</div>
+                                    </div>
+                                    <div class="item-inventory__now">
+                                        <div class="item-inventory__value">$ 15</div>
+                                        <div class="item-inventory__discription">Цена на рынке</div>
+                                    </div>
+                                </div>
+                                <div class="item-inventory__button btn btn-grey">Перейти к продаже</div>
+                            </div>
+                            <div class="inventory__item item-inventory">
+                                <div class="item-inventory__image bg-image">
+                                    <img src="img/nft.png" alt="">
+                                </div>
+                                <div class="item-inventory__name">
+                                    Название NFT
+                                </div>
+                                <div class="item-inventory__collection">
+                                    Название коллекции
+                                </div>
+                                <div class="item-inventory__price">
+                                    <div class="item-inventory__bought">
+                                        <div class="item-inventory__value">$ 10</div>
+                                        <div class="item-inventory__discription">За сколько куплена</div>
+                                    </div>
+                                    <div class="item-inventory__now">
+                                        <div class="item-inventory__value">$ 15</div>
+                                        <div class="item-inventory__discription">Цена на рынке</div>
+                                    </div>
+                                </div>
+                                <div class="item-inventory__button btn btn-grey">Перейти к продаже</div>
+                            </div>
+                            <div class="inventory__item item-inventory">
+                                <div class="item-inventory__image bg-image">
+                                    <img src="img/nft.png" alt="">
+                                </div>
+                                <div class="item-inventory__name">
+                                    Название NFT
+                                </div>
+                                <div class="item-inventory__collection">
+                                    Название коллекции
+                                </div>
+                                <div class="item-inventory__price">
+                                    <div class="item-inventory__bought">
+                                        <div class="item-inventory__value">$ 10</div>
+                                        <div class="item-inventory__discription">За сколько куплена</div>
+                                    </div>
+                                    <div class="item-inventory__now">
+                                        <div class="item-inventory__value">$ 15</div>
+                                        <div class="item-inventory__discription">Цена на рынке</div>
+                                    </div>
+                                </div>
+                                <div class="item-inventory__button btn btn-grey">Перейти к продаже</div>
+                            </div>
+                            <div class="inventory__item item-inventory">
+                                <div class="item-inventory__image bg-image">
+                                    <img src="img/nft.png" alt="">
+                                </div>
+                                <div class="item-inventory__name">
+                                    Название NFT
+                                </div>
+                                <div class="item-inventory__collection">
+                                    Название коллекции
+                                </div>
+                                <div class="item-inventory__price">
+                                    <div class="item-inventory__bought">
+                                        <div class="item-inventory__value">$ 10</div>
+                                        <div class="item-inventory__discription">За сколько куплена</div>
+                                    </div>
+                                    <div class="item-inventory__now">
+                                        <div class="item-inventory__value">$ 15</div>
+                                        <div class="item-inventory__discription">Цена на рынке</div>
+                                    </div>
+                                </div>
+                                <div class="item-inventory__button btn btn-grey">Перейти к продаже</div>
+                            </div>
+                            <div class="inventory__item item-inventory">
+                                <div class="item-inventory__image bg-image">
+                                    <img src="img/nft.png" alt="">
+                                </div>
+                                <div class="item-inventory__name">
+                                    Название NFT
+                                </div>
+                                <div class="item-inventory__collection">
+                                    Название коллекции
+                                </div>
+                                <div class="item-inventory__price">
+                                    <div class="item-inventory__bought">
+                                        <div class="item-inventory__value">$ 10</div>
+                                        <div class="item-inventory__discription">За сколько куплена</div>
+                                    </div>
+                                    <div class="item-inventory__now">
+                                        <div class="item-inventory__value">$ 15</div>
+                                        <div class="item-inventory__discription">Цена на рынке</div>
+                                    </div>
+                                </div>
+                                <div class="item-inventory__button btn btn-grey">Перейти к продаже</div>
+                            </div>
+                            <div class="inventory__item item-inventory">
+                                <div class="item-inventory__image bg-image">
+                                    <img src="img/nft.png" alt="">
+                                </div>
+                                <div class="item-inventory__name">
+                                    Название NFT
+                                </div>
+                                <div class="item-inventory__collection">
+                                    Название коллекции
+                                </div>
+                                <div class="item-inventory__price">
+                                    <div class="item-inventory__bought">
+                                        <div class="item-inventory__value">$ 10</div>
+                                        <div class="item-inventory__discription">За сколько куплена</div>
+                                    </div>
+                                    <div class="item-inventory__now">
+                                        <div class="item-inventory__value">$ 15</div>
+                                        <div class="item-inventory__discription">Цена на рынке</div>
+                                    </div>
+                                </div>
+                                <div class="item-inventory__button btn btn-grey">Перейти к продаже</div>
+                            </div>
+                            <div class="inventory__item item-inventory">
+                                <div class="item-inventory__image bg-image">
+                                    <img src="img/nft.png" alt="">
+                                </div>
+                                <div class="item-inventory__name">
+                                    Название NFT
+                                </div>
+                                <div class="item-inventory__collection">
+                                    Название коллекции
+                                </div>
+                                <div class="item-inventory__price">
+                                    <div class="item-inventory__bought">
+                                        <div class="item-inventory__value">$ 10</div>
+                                        <div class="item-inventory__discription">За сколько куплена</div>
+                                    </div>
+                                    <div class="item-inventory__now">
+                                        <div class="item-inventory__value">$ 15</div>
+                                        <div class="item-inventory__discription">Цена на рынке</div>
+                                    </div>
+                                </div>
+                                <div class="item-inventory__button btn btn-grey">Перейти к продаже</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-notification dn">
+                        <div class="p-notification__input filter__checkbox">
+                            <input type="checkbox" id="access">
+                            <label for="access">
+                                Разрешить уведомления
+                            </label>
+                        </div>
+                        <div class="p-notification__input filter__checkbox">
+                            <input type="checkbox" id="sound">
+                            <label for="sound">
+                                Получать уведомления со звуком
+                            </label>
+                        </div>
+                        <div class="p-notification__input filter__checkbox">
+                            <input type="checkbox" id="noname">
+                            <label for="noname">
+                                Получать уведомления со звуком
+                            </label>
+                        </div>
+                    </div>
+                    <div class="editing dn">
+                        <div class="editing__input">
+                            <label for="p-name">
+                                Никнейм
+                            </label>
+                            <div class="input-edit"><input type="text" id="p-name"></div>
+                        </div>
+                        <div class="editing__input">
+                            <label for="p-email">
+                                Электронная почта
+                            </label>
+                            <div class="input-edit"><input type="text" id="p-email"></div>
+                        </div>
+                        <div class="editing__buttons">
+                            <div class="editing__button--save btn">Сохранить</div>
+                            <div class="editing__button--clear btn btn-grey">Отменить</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+<script src="js/script.js"></script>
+<script src="js/profile.js"></script>
+
+</html>

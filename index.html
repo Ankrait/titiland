@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Titiland</title>
+   <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+   <div class="wrapper">
+      <header class="header">
+         <div class="header__container">
+            <a class="header__logo logo" href="#">
+               <div class="logo__image">
+                  <img src="img/logo.svg" alt="Лого">
+               </div>
+               <div class="logo__name">
+                  Titiland
+               </div>
+            </a>
+            <div class="header__menu menu">
+               <a class="menu__item active">Zoom Loupe</a>
+               <a class="menu__item" href="#">MarketPlace</a>
+               <a class="menu__item" href="titifund.html">TitiFund</a>
+               <a class="menu__item" href="#">Whitepaper</a>
+            </div>
+            <button class="header__button btn" style="display: none;">
+               Подключить кошелек
+            </button>
+            <div class="header__icons">
+               <a class="header__notification">
+                  <img src="img/notification.svg" alt="">
+                  <span>4</span>
+               </a>
+               <a href="profile.html" class="header__user">
+                  <img src="img/user.svg" alt="">
+               </a>
+               <a class="header__wallet">
+                  <img src="img/wallet.svg" alt="">
+               </a>
+            </div>
+            <div class="burger">
+               <span class="bar-top"></span>
+               <span class="bar-mid"></span>
+               <span class="bar-bot"></span>
+            </div>
+         </div>
+      </header>
+      <main class="main">
+         <div class="main__container">
+            <div class="wallet">
+               <div class="wallet__body">
+                  <div class="closebtn"></div>
+                  <div class="wallet__title">Мой кошелек</div>
+                  <div class="wallet__number">0xe1C...B3F5</div>
+                  <div class="wallet__value">$0,00 USD</div>
+                  <div class="wallet__button btn">Пополнить баланс</div>
+                  <div class="wallet__button btn btn-grey">Выйти из кошелька</div>
+               </div>
+            </div>
+            <div class="notification">
+               <div class="notification__body">
+                  <div class="closebtn"></div>
+                  <div class="notification__title">Уведомления</div>
+                  <div class="notification__items">
+                     <div class="notification__null">
+                        У вас нет<br> уведомлений
+                     </div>
+                     <div class="notification__item">
+                        <div class="notification__name">
+                           Запрос на покупку NFT
+                        </div>
+                        <div class="notification__description">
+                           Вам поступило предложение о покупке NFT из вашей коллекции “Название NFT”.
+                        </div>
+                     </div>
+                     <div class="notification__item">
+                        <div class="notification__name">
+                           Запрос отклонен
+                        </div>
+                        <div class="notification__description">
+                           Владелец “Название NFT” отклонил предложение
+                        </div>
+                     </div>
+                     <div class="notification__item">
+                        <div class="notification__name">
+                           Запрос отклонен
+                        </div>
+                        <div class="notification__description">
+                           Владелец “Название NFT” отклонил предложение
+                        </div>
+                     </div>
+                     <div class="notification__item">
+                        <div class="notification__name">
+                           Вы купили NFT
+                        </div>
+                        <div class="notification__description">
+                           Поздравляем! Вы купили “Название NFT”.
+                        </div>
+                     </div>
+                     <div class="notification__item">
+                        <div class="notification__name">
+                           Вы продали NFT
+                        </div>
+                        <div class="notification__description">
+                           Поздравляем! Вы продали “Название NFT” за $100.
+                        </div>
+                     </div>
+                  </div>
+                  <div class="notification__button btn btn-grey">Посмотреть все</div>
+               </div>
+            </div>
+         </div>
+         <div class="registration" style="display: none;">
+            <div class="registration__title">Добро пожаловать!</div>
+            <input type="text" name="nick" class="registration__nick" placeholder="Введите никнейм">
+            <input type="text" name="email" class="registration__email" placeholder="Введите электронную почту">
+            <button class="registration__button btn">Завершить регистрацию</button>
+         </div>
+         <div class="collection" style="display: none;">
+            <span class="closebtn"></span>
+            <div class="collection__image bg-image">
+               <img src="img/nft.png" alt="">
+            </div>
+            <div class="collection__name">
+               Название коллекции
+            </div>
+            <div class="collection__info">
+               Описание коллекции Описание коллекции Описание коллекции Описание коллекции
+            </div>
+            <div class="collection__stats stats-collection">
+               <div class="stats-collection__count">
+                  <div class="stats-collection__value">100000</div>
+                  <div class="stats-collection__description">Всего NFT</div>
+               </div>
+               <div class="stats-collection__bought">
+                  <div class="stats-collection__value">1000</div>
+                  <div class="stats-collection__description">Куплено</div>
+               </div>
+               <div class="stats-collection__price">
+                  <div class="stats-collection__value">$ 99</div>
+                  <div class="stats-collection__description">Стоимость NFT</div>
+               </div>
+            </div>
+            <div class="collection__button btn">Заминтить</div>
+         </div>
+         <div class="nft-card" style="display: none;">
+            <div class="closebtn"></div>
+            <div class="nft-card__info">
+               <div class="nft-card__status">Свободна</div>
+               <div class="nft-card__name">Название NFT</div>
+               <div class="nft-card__collection">Название коллекции</div>
+               <div class="nft-card__price price-nft-card">
+                  <div class="price-nft-card__item">
+                     <div class="price-nft-card__value">$ 10</div>
+                     <div class="price-nft-card__description">Стоимость NFT</div>
+                  </div>
+               </div>
+               <div class="nft-card__button btn">Заминтить</div>
+            </div>
+            <div class="nft-card__image bg-image">
+               <img src="img/nft.png" alt="">
+            </div>
+         </div>
+         <div class="nft-card sale" style="display: none;">
+            <div class="closebtn"></div>
+            <div class="nft-card__info">
+               <div class="nft-card__status">На продаже</div>
+               <div class="nft-card__name">Название NFT</div>
+               <div class="nft-card__collection">Название коллекции</div>
+               <div class="nft-card__price price-nft-card">
+                  <div class="price-nft-card__item">
+                     <div class="price-nft-card__value">$ 10</div>
+                     <div class="price-nft-card__description">Стоимость NFT</div>
+                  </div>
+               </div>
+               <div class="nft-card__button btn btn-grey">Перейти к покупке</div>
+            </div>
+            <div class="nft-card__image bg-image">
+               <img src="img/nft.png" alt="">
+            </div>
+         </div>
+         <div class="nft-card bought" style="display: none;">
+            <div class="closebtn"></div>
+            <div class="nft-card__info">
+               <div class="nft-card__status">Куплена</div>
+               <div class="nft-card__name">Название NFT</div>
+               <div class="nft-card__collection">Название коллекции</div>
+               <div class="nft-card__button btn btn-grey">Запросить покупку</div>
+               <div class="nft-card__button btn btn-grey">Запросить обмен</div>
+            </div>
+            <div class="nft-card__image bg-image">
+               <img src="img/nft.png" alt="">
+            </div>
+         </div>
+         <div class="minting" style="display: none;">
+            <div class="closebtn"></div>
+            <div class="minting__container">
+               <div class="minting__title">
+                  Минт NFT
+               </div>
+               <div class="minting__collection">
+                  Коллекция “Еж и Кролик”
+               </div>
+               <div class="minting__count">
+                  <div class="minting__description">Количество</div>
+                  <div class="minus"></div>
+                  <span class="minting__value">1</span>
+                  <div class="plus active"></div>
+               </div>
+               <div class="minting__price">
+                  <div class="minting__description">Cтоимость</div>
+                  <span class="minting__value">$150</span>
+               </div>
+               <div class="minting__button btn">
+                  Заминтить
+               </div>
+               <div class="minting__info">
+                  Вы получите cлучайные NFT из этой коллекции
+               </div>
+            </div>
+         </div>
+         <div class="warning" style="display: none;">
+            <img src="img/warning.svg" alt="">
+            <span>Что-то пошло не так</span>
+         </div>
+      </main>
+      <footer class="footer">
+         <div class="footer__container">
+            <div class="footer__switch">
+               <div class="footer__user active">Пользователь</div>
+               <div class="footer__explorer">Исследователь</div>
+            </div>
+            <div class="footer__buttons">
+               <a class="footer__3d">
+                  <img src="img/3d.svg" alt="">
+               </a>
+               <a class="footer__reset">
+                  <img src="img/reset.svg" alt="">
+               </a>
+            </div>
+         </div>
+      </footer>
+   </div>
+</body>
+<script src="js/script.js"></script>
+
+</html>
