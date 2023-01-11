@@ -10,7 +10,7 @@
 </head>
 
 <body>
-   <div class="wrapper">
+   <div class="wrapper overflow--hide">
       <header class="header">
          <div class="header__container">
             <a class="header__logo logo" href="#">
@@ -22,7 +22,7 @@
                </div>
             </a>
             <div class="header__menu menu">
-               <a class="menu__item active">Zoom Loupe</a>
+               <a class="menu__item">Zoom Loupe</a>
                <a class="menu__item" href="#">MarketPlace</a>
                <a class="menu__item" href="titifund.html">TitiFund</a>
                <a class="menu__item" href="#">Whitepaper</a>
@@ -114,17 +114,25 @@
                   <div class="notification__button btn btn-grey">Посмотреть все</div>
                </div>
             </div>
-            <button class="btn registr">registr</button>
-            <button class="btn collect">collection</button>
-            <button class="btn nft">nft-card</button>
-            <button class="btn sale">sale</button>
-            <button class="btn bought">bought</button>
-            <button class="btn my">my</button>
-            <button class="btn mint">minting</button>
-            <button class="btn warn">warn</button>
+            <span class="btns">
+               <button class="btn registr">registr</button>
+               <button class="btn collect">collection</button>
+               <button class="btn nft">nft-card</button>
+               <button class="btn sale">sale</button>
+               <button class="btn bought">bought</button>
+               <button class="btn my">my</button>
+               <button class="btn mint">minting</button>
+               <button class="btn warn">warn</button>
+            </span>
             <style>
-               .main__container .btn {
-                  margin: 200px 20px 0 0;
+               .btns .btn {
+                  margin: 20px 20px 0 0;
+                  width: 200px;
+               }
+               .main__container span {
+                  margin: 100px;
+                  display: flex;
+                  flex-wrap: wrap;
                }
             </style>
          </div>
