@@ -1,0 +1,6 @@
+подумать над overflow на мобилках
+
+оттягивание на мобилке блоков
+html, body {
+    overscroll-behavior: none;
+}

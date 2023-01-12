@@ -87,6 +87,7 @@ body {
   font-size: 100%;
   line-height: 1;
   font-size: 14px;
+  overscroll-behavior: none;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -242,8 +243,8 @@ video {
 }
 
 .btn:hover {
-  background: #106ffd;
-  box-shadow: 0px 0px 8px #106ffd;
+  background: #1672fc;
+  box-shadow: 0px 0px 8px #1672fc;
 }
 
 .btn-grey {
@@ -334,7 +335,7 @@ video {
 */
 /*///////////////////////// Хедр /////////////////////////*/
 .header {
-  margin-left: calc(100vw - 100%);
+  padding-right: calc(20px - (100vw - 100%));
   position: fixed;
   z-index: 5;
   top: 0;
@@ -478,8 +479,9 @@ video {
     display: block;
   }
 
-  .header__logo {
+  .header__icons {
     flex: 1 1 auto;
+    justify-content: end;
   }
 
   .menu {
@@ -496,7 +498,7 @@ video {
 
     background: rgba(5, 5, 12, 1);
 
-    transition: transform 0.8s ease, opacity 0.8s ease;
+    transition: transform 0.6s ease, opacity 0.6s ease;
     transform: translate(0, -100%);
   }
 
@@ -573,6 +575,11 @@ video {
   background: linear-gradient(92.61deg, #0047FF 16.48%, #1070FF 100.86%);
   box-shadow: 0px 0px 8px #0066FF;
   border-radius: 50%;
+}
+
+.footer__buttons a:hover {
+  background: #1672fc;
+  box-shadow: 0px 0px 8px #1672fc;
 }
 
 @media screen and (max-width: 768px) {
@@ -1018,10 +1025,25 @@ video {
   color: #BABABA;
 }
 
-.minting__value {
+span.minting__value {
   font-weight: 700;
   font-size: 16px;
-  line-height: 1;
+}
+
+input.minting__value {
+  font-weight: 700;
+  font-size: 16px;
+  background: transparent;
+  color: #fcfcfc;
+  text-align: center;
+
+  max-width: 20px;
+  -moz-appearance: textfield;
+}
+
+input.minting__value::-webkit-inner-spin-button,
+input.minting__value::-webkit-outer-spin-button {
+  display: none;
 }
 
 .minting__count .minting__value {
@@ -1030,6 +1052,11 @@ video {
 
 .plus,
 .minus {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -1042,7 +1069,6 @@ video {
   position: relative;
 
   line-height: 0;
-  cursor: pointer;
 }
 
 .plus::after,
@@ -1081,6 +1107,7 @@ video {
 
 .plus.active,
 .minus.active {
+  cursor: pointer;
   border-color: #fcfcfc;
 }
 
@@ -1148,7 +1175,7 @@ video {
 
   transform: translateX(200%);
   visibility: hidden;
-  transition: transform 0.5s linear, visibility 0.5s ease;
+  transition: transform 0.3s ease, visibility 0.3s ease;
 
   background: rgba(5, 5, 12, 0.98);
   border-radius: 20px;
@@ -1189,6 +1216,7 @@ video {
     left: 0;
     width: 100%;
     padding: 30px 16px;
+    transform: translateY(200%);
   }
 
   .wallet__title {
@@ -1234,7 +1262,7 @@ video {
   flex-direction: column;
   transform: translateX(200%);
   visibility: hidden;
-  transition: transform 0.5s linear, visibility 0.5s ease;
+  transition: transform 0.3s ease, visibility 0.3s ease;
 
   overflow: hidden;
 }
@@ -1340,6 +1368,10 @@ video {
 
     min-height: 375px;
     height: min(590px, calc(100vh - 190px));
+  }
+
+  .notification__body {
+    transform: translateY(200%);
   }
 
   .notification__title {
@@ -1474,6 +1506,12 @@ video {
 //
 */
 /*///////////////////////// Профиль /////////////////////////*/
+.main-profile__container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
 .profile {
   padding: 160px 0 60px 0;
   display: flex;
@@ -1562,8 +1600,8 @@ video {
   .profile {
     flex-wrap: wrap;
     gap: 12px;
-    padding: 10px 0;
-    margin: 100px 0 20px 0;
+    padding: 110px 0 10px 0;
+    margin: 0 0 20px 0;
   }
 
   .profile__button {
@@ -1877,8 +1915,8 @@ video {
 }
 
 input[type="range"]::-webkit-slider-thumb {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   background: #0066FF;
   border-radius: 50%;
   pointer-events: auto;
@@ -1886,8 +1924,8 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 input[type="range"]::-moz-range-thumb {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   background: #0066FF;
   border-radius: 50%;
   pointer-events: auto;
@@ -2242,12 +2280,12 @@ input[type="range"]::-moz-range-thumb {
 
     z-index: 7;
     right: 15px;
-    top: 15px;
+    top: 50%;
     left: auto;
     z-index: 5;
-    transform: translateX(200%);
+    transform: translate(200%, -50%);
     visibility: hidden;
-    transition: transform 0.5s linear;
+    transition: transform 0.3s ease;
   }
 
   .filter .filter__title,
@@ -2256,7 +2294,7 @@ input[type="range"]::-moz-range-thumb {
   }
 
   .filter.active {
-    transform: translateX(0);
+    transform: translate(0, -50%);
     visibility: visible;
   }
 
@@ -2298,11 +2336,15 @@ input[type="range"]::-moz-range-thumb {
   }
 
   .filter {
+    transform: translateY(200%);
     top: auto;
     left: 0;
     right: auto;
     bottom: 0;
     width: 100%;
+  }
+  .filter.active {
+    transform: translateY(0);
   }
 }
 
@@ -2409,12 +2451,52 @@ input[type="range"]::-moz-range-thumb {
 }
 
 @media (hover: none) {
+  .btn:hover {
+    background: #0066FF;
+    box-shadow: 0px 0px 8px #0066FF;
+  }
+
+  .btn-grey:hover {
+    background: #393E45;
+    box-shadow: 0px 0px 8px #393E45;
+  }
+
+  .btn:active {
+    background: #1672fc;
+    box-shadow: 0px 0px 8px #1672fc;
+  }
+
+  .btn-grey:active {
+    background: #46494e;
+    box-shadow: 0px 0px 8px #46494e;
+  }
+
+  .menu__item:not(.active):hover {
+    color: #fcfcfc;
+    transform: scale(1);
+  }
+
+  .menu__item:not(.active):active {
+    color: #98C1FF;
+    transform: scale(1.05);
+  }
+
   .notification__item:hover {
     background: transparent;
   }
 
   .notification__item:active {
     background: #161B28;
+  }
+
+  .footer__buttons a:hover {
+    background: linear-gradient(92.61deg, #0047FF 16.48%, #1070FF 100.86%);
+    box-shadow: 0px 0px 8px #0066FF;
+  }
+
+  .footer__buttons a:active {
+    background: #1672fc;
+    box-shadow: 0px 0px 8px #1672fc;
   }
 
   .sort__size-big:not(.active):hover div,
@@ -2435,5 +2517,21 @@ input[type="range"]::-moz-range-thumb {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+  }
+
+  .by-sort__item:hover {
+    background: transparent;
+  }
+
+  .by-sort__item:active {
+    background: rgba(5, 5, 12, 0.9);
+  }
+
+  .p-menu__item:not(.active):hover {
+    color: #fcfcfc;
+  }
+
+  .p-menu__item:not(.active):active {
+    color: #BABABA;
   }
 }
