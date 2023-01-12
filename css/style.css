@@ -1025,12 +1025,7 @@ video {
   color: #BABABA;
 }
 
-span.minting__value {
-  font-weight: 700;
-  font-size: 16px;
-}
-
-input.minting__value {
+.minting__value {
   font-weight: 700;
   font-size: 16px;
   background: transparent;
@@ -1041,10 +1036,25 @@ input.minting__value {
   -moz-appearance: textfield;
 }
 
-input.minting__value::-webkit-inner-spin-button,
-input.minting__value::-webkit-outer-spin-button {
+.minting__value::-webkit-inner-spin-button,
+.minting__value::-webkit-outer-spin-button {
   display: none;
 }
+
+.minting__price .minting__value {
+  max-width: 100%;
+  width: 30px;
+}
+
+.minting__price .minting__value--cont {}
+
+.minting__price .minting__value--cont::before {
+  content: "$";
+  font-weight: 700;
+  font-size: 16px;
+  color: #fcfcfc;
+}
+
 
 .minting__count .minting__value {
   margin: 0 10px;
@@ -1858,18 +1868,11 @@ input.minting__value::-webkit-outer-spin-button {
   background: #8993a1;
   margin: 28px 0 0 0;
   -webkit-touch-callout: none;
-  /* iOS Safari */
   -webkit-user-select: none;
-  /* Safari */
   -khtml-user-select: none;
-  /* Konqueror HTML */
   -moz-user-select: none;
-  /* Old versions of Firefox */
   -ms-user-select: none;
-  /* Internet Explorer/Edge */
   user-select: none;
-  /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
 .filter__slider-progress {
@@ -2343,6 +2346,7 @@ input[type="range"]::-moz-range-thumb {
     bottom: 0;
     width: 100%;
   }
+
   .filter.active {
     transform: translateY(0);
   }

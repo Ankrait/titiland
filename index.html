@@ -27,7 +27,7 @@
                <a class="menu__item" href="titifund.html">TitiFund</a>
                <a class="menu__item" href="#">Whitepaper</a>
             </div>
-            <button class="header__button btn dn" >
+            <button class="header__button btn dn">
                Подключить кошелек
             </button>
             <div class="header__icons">
@@ -128,6 +128,7 @@
                   margin: 20px 20px 0 0;
                   width: 200px;
                }
+
                .main__container span {
                   margin: 100px;
                   display: flex;
@@ -135,13 +136,13 @@
                }
             </style>
          </div>
-         <div class="registration dn" >
+         <div class="registration dn">
             <div class="registration__title">Добро пожаловать!</div>
             <input type="text" name="nick" class="registration__nick" placeholder="Введите никнейм">
             <input type="text" name="email" class="registration__email" placeholder="Введите электронную почту">
             <button class="registration__button btn">Завершить регистрацию</button>
          </div>
-         <div class="collection dn" >
+         <div class="collection dn">
             <span class="closebtn"></span>
             <div class="collection__image bg-image">
                <img src="img/nft.png" alt="">
@@ -168,7 +169,7 @@
             </div>
             <div class="collection__button btn">Заминтить</div>
          </div>
-         <div class="nft-card dn" >
+         <div class="nft-card dn">
             <div class="closebtn"></div>
             <div class="nft-card__info">
                <div class="nft-card__status">Свободна</div>
@@ -186,7 +187,7 @@
                <img src="img/nft.png" alt="">
             </div>
          </div>
-         <div class="nft-card sale dn" >
+         <div class="nft-card sale dn">
             <div class="closebtn"></div>
             <div class="nft-card__info">
                <div class="nft-card__status">На продаже</div>
@@ -204,7 +205,7 @@
                <img src="img/nft.png" alt="">
             </div>
          </div>
-         <div class="nft-card bought dn" >
+         <div class="nft-card bought dn">
             <div class="closebtn"></div>
             <div class="nft-card__info">
                <div class="nft-card__status">Куплена</div>
@@ -239,7 +240,7 @@
                <img src="img/nft.png" alt="">
             </div>
          </div>
-         <div class="minting dn" >
+         <div class="minting dn">
             <div class="closebtn"></div>
             <div class="minting__container">
                <div class="minting__title">
@@ -256,7 +257,9 @@
                </div>
                <div class="minting__price">
                   <div class="minting__description">Cтоимость</div>
-                  <span class="minting__value">$150</span>
+                  <div class="minting__value--cont">
+                     <input type="number" class="minting__value" value="150" max="10000000" min="0">
+                  </div>
                </div>
                <div class="minting__button btn">
                   Заминтить
@@ -266,7 +269,7 @@
                </div>
             </div>
          </div>
-         <div class="warning dn" >
+         <div class="warning dn">
             <img src="img/warning.svg" alt="">
             <span>Что-то пошло не так</span>
          </div>
