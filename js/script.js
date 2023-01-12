@@ -1,13 +1,27 @@
 ///////////////// Бургер /////////////////////
 let toggle = document.querySelector('.burger');
 let header = document.querySelector('.header');
+let header_menu = document.querySelector('.header__menu');
 let body = document.body;
 
 toggle.addEventListener('click', function (e) {
     this.classList.toggle('opened');
     header.classList.toggle('opened');
-    document.body.classList.toggle('overflow--hide')
+    body.classList.toggle('overflow--hide')
 });
+
+document.addEventListener('click', e => {
+    let target = e.target;
+    let its_block = target == header_menu || header_menu.contains(target);
+    let its_btn = toggle.contains(target);
+    let block_is_active = header.classList.contains("opened");
+
+    if (!its_block && !its_btn && block_is_active) {
+        toggle.classList.remove('opened');
+        header.classList.remove('opened');
+        body.classList.remove('overflow--hide')
+    }
+})
 ///////////////// Бургер /////////////////////
 ///
 ///

@@ -5,23 +5,23 @@ const priceInput = document.querySelectorAll(".filter__price--min, .filter__pric
 const rangeInput = document.querySelectorAll(".filter__slider--range input");
 rangeInput.forEach(input => {
     input.addEventListener("input", (e) => {
-        let minValue = parseInt(rangeInput[0].value);
-        let maxValue = parseInt(rangeInput[1].value);
+        let minValue = +parseFloat(rangeInput[0].value).toFixed(1);
+        let maxValue = +parseFloat(rangeInput[1].value).toFixed(1);
         if (maxValue - minValue < 0) {
             if (e.target.className === "max-value") {
                 rangeInput[0].value = maxValue;
-                progress.style.left = ((maxValue) / rangeInput[0].max) * 100 + "%"
+                progress.style.left = ((maxValue) / parseFloat(rangeInput[0].max).toFixed(1)) * 100 + "%"
                 priceInput[0].value = maxValue;
             }
             else {
                 rangeInput[1].value = minValue;
-                progress.style.right = 100 - ((minValue) / rangeInput[1].max) * 100 + "%"
+                progress.style.right = 100 - ((minValue) / +parseFloat(rangeInput[1].max).toFixed(1)) * 100 + "%"
                 priceInput[1].value = minValue;
             }
         } else {
             priceInput[0].value = minValue;
             priceInput[1].value = maxValue;
-            progress.style.left = (minValue / rangeInput[0].max) * 100 + "%";
+            progress.style.left = (minValue / +parseFloat(rangeInput[0].max).toFixed(1)) * 100 + "%";
             progress.style.right = 100 - (maxValue / rangeInput[1].max) * 100 + "%";
         }
 
@@ -29,29 +29,31 @@ rangeInput.forEach(input => {
 })
 
 priceInput.forEach(input => {
-    input.addEventListener("input", (e) => {
-        let minValue = parseInt(priceInput[0].value);
-        let maxValue = parseInt(priceInput[1].value);
+    input.addEventListener("change", (e) => {
+        let minValue = +parseFloat(priceInput[0].value).toFixed(1);
+        let maxValue = +parseFloat(priceInput[1].value).toFixed(1);
 
         if (e.target.className === "filter__price--min") {
-            if (minValue < priceInput[0].min) {
+            if (minValue <= +parseFloat(priceInput[0].min).toFixed(1)) {
                 priceInput[0].value = priceInput[0].min;
-                minValue = parseInt(priceInput[1].value);
+                minValue = +parseFloat(priceInput[1].value).toFixed(1);
             } else if (minValue > maxValue) {
                 priceInput[0].value = maxValue;
                 minValue = maxValue;
             }
 
         } else {
-            if (maxValue > priceInput[1].max) {
+            if (maxValue >= +parseFloat(priceInput[1].max).toFixed(1)) {
                 priceInput[1].value = priceInput[1].max;
-                maxValue = parseInt(priceInput[1].value);
+                maxValue = +parseFloat(priceInput[1].value).toFixed(1);
             } else if (maxValue < minValue) {
                 priceInput[1].value = minValue;
                 maxValue = minValue;
             }
         }
 
+        minValue = +parseFloat(priceInput[0].value).toFixed(1);
+        maxValue = +parseFloat(priceInput[1].value).toFixed(1);
 
         if (maxValue - minValue >= 0) {
             if (e.target.className === "filter__price--min") {
