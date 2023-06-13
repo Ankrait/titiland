@@ -804,6 +804,10 @@ video {
   .connection__title {
     font-size: 20px;
   }
+
+  .connection__text {
+    font-size: 14px;
+  }
 }
 /*///////////////////////// Подключение /////////////////////////*/
 /*
