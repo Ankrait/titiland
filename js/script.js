@@ -56,30 +56,30 @@ document.addEventListener('click', e => {
 })
 
 
-const wallet__btn = document.querySelector(".header__wallet");
-const wallet__closebtn = document.querySelector(".wallet .closebtn");
-const wallet__block = document.querySelector(".wallet__body");
+const open_btn = document.querySelector(".header__wallet");
+const close_btn = document.querySelector(".wallet .closebtn");
+const block_popup = document.querySelector(".wallet__body");
 const wallet__block2 = document.querySelector(".wallet");
 
-wallet__btn.addEventListener("click", () => {
-    wallet__block.classList.add("active");
+open_btn.addEventListener("click", () => {
+    block_popup.classList.add("active");
     wallet__block2.classList.add("active");
 })
 
-wallet__closebtn.addEventListener("click", () => {
-    wallet__block.classList.remove("active");
+close_btn.addEventListener("click", () => {
+    block_popup.classList.remove("active");
     wallet__block2.classList.remove("active");
 })
 
 
 document.addEventListener('click', e => {
     let target = e.target;
-    let its_block = target == wallet__block || wallet__block.contains(target);
-    let its_btn = target == wallet__btn;
-    let block_is_active = wallet__block.classList.contains("active");
+    let its_block = target == block_popup || block_popup.contains(target);
+    let its_btn = target == open_btn;
+    let block_is_active = block_popup.classList.contains("active");
 
     if (!its_block && !its_btn && block_is_active) {
-        wallet__block.classList.remove("active");
+        block_popup.classList.remove("active");
         wallet__block2.classList.remove("active");
     }
 })
