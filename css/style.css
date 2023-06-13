@@ -414,6 +414,12 @@ video {
   gap: 24px;
 }
 
+.header__login {
+  display: none;
+  background: none;
+  border: 0;
+}
+
 .header__notification {
   position: relative;
 }
@@ -437,6 +443,15 @@ video {
 
 .header__icons a {
   cursor: pointer;
+}
+
+@media screen and (max-width:550px) {
+  .header__login {
+    display: block;
+  }
+  .header__button {
+    display: none;
+  }
 }
 
 @media screen and (max-width:425px) {
@@ -656,19 +671,42 @@ video {
 }
 
 .registration input {
-  margin: 0 0 12px 0;
+  margin: 12px 0 0 0;
   font-weight: 400;
   font-size: 16px;
   line-height: calc(19/16);
-  color: #fcfcfc;
+  color: #BABABA;
 
   padding: 12px 0 12px 20px;
   background: #161B28;
+  border: 1px solid transparent;
   border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.registration input:focus {
+  border: 1px solid #0066FF;
+  color: #fcfcfc;
+}
+.registration input.error {
+  border: 1px solid #CC2B2B;
+}
+.error-text {
+  display: none;
+  max-width: 330px;
+  width: 100%;
+  margin: 4px auto 0 auto;
+  align-self: start;
+  margin-top: 6px;
+  color: #CC2B2B;
+  font-size: 14px;
+  line-height: 17px;
+}
+.registration input.error + span {
+  display: block;
 }
 
 .registration__button {
-  margin: 12px 0 0 0;
+  margin: 24px 0 0 0;
   padding: 12px 0;
 
   text-align: center;
@@ -697,6 +735,77 @@ video {
 }
 
 /*///////////////////////// Регистрация /////////////////////////*/
+/*
+//
+*/
+/*///////////////////////// Подключение /////////////////////////*/
+.connection{
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: min(570px, 90%);
+  padding: 60px 16px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: rgba(5, 5, 12, 0.98);
+  border-radius: 20px;
+}
+
+.connection__title {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: clac(31/26);
+  margin: 0 0 4px 0;
+}
+
+.connection__text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: calc(22/18);
+  color: #787878;
+}
+
+.connection__buttons {
+  margin: 28px 0 0 0;
+  width: 100%;
+  max-width: 330px;
+}
+
+.connection__btn {
+  padding: 8px 20px;
+  background: #161B28;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin: 0 0 12px 0;
+
+  font-size: 16px;
+  line-height: 19px;
+  color: #FCFCFC;
+}
+
+.connection__btn:hover {
+  background: #161b28a9;
+}
+
+@media screen and (max-width: 550px) {
+  .connection {
+    padding: 60px 16px;
+  }
+
+  .connection__title {
+    font-size: 20px;
+  }
+}
+/*///////////////////////// Подключение /////////////////////////*/
 /*
 //
 */

@@ -27,10 +27,15 @@
                <a class="menu__item" href="titifund.html">TitiFund</a>
                <a class="menu__item" href="#">Whitepaper</a>
             </div>
-            <button class="header__button btn dn">
-               Подключить кошелек
-            </button>
-            <div class="header__icons">
+           <div class="header__icons">
+               <button class="header__button btn">
+                  Подключить кошелек
+               </button>
+               <button class="header__login">
+                  <img src="img/login.svg" alt="Login">
+               </button>
+           </div>
+            <div class="header__icons dn">
                <a class="header__notification">
                   <img src="img/notification.svg" alt="">
                   <span>4</span>
@@ -115,6 +120,7 @@
             </div>
             <span class="btns">
                <button class="btn registr">registr</button>
+               <button class="btn connect">connect</button>
                <button class="btn collect">collection</button>
                <button class="btn nft">nft-card</button>
                <button class="btn sale">sale</button>
@@ -140,9 +146,30 @@
          </div>
          <div class="registration dn">
             <div class="registration__title">Добро пожаловать!</div>
-            <input type="text" name="nick" class="registration__nick" placeholder="Введите никнейм">
+            <input type="text" name="nick" class="registration__nick error" placeholder="Введите никнейм">
+            <span class="error-text">Что-то не так</span>
             <input type="text" name="email" class="registration__email" placeholder="Введите электронную почту">
+            <span class="error-text"></span>
             <button class="registration__button btn">Завершить регистрацию</button>
+         </div>
+         <div class="connection dn">
+            <div class="closebtn"></div>
+            <div class="connection__title">Подключите кошелек</div>
+            <div class="connection__text">Для продолжения регистрации</div>
+            <div class="connection__buttons">
+               <button class="connection__btn">
+                  <img src="img/connection/wallet.svg" alt="Wallet button">
+                  Wallet Connect
+               </button>
+               <button class="connection__btn">
+                  <img src="img/connection/coinbase.svg" alt="Coinbase button">
+                  Coinbase
+               </button>
+               <button class="connection__btn">
+                  <img src="img/connection/MetaMask.png" alt="MetaMask button">
+                  Metamask
+               </button>
+            </div>
          </div>
          <div class="collection dn">
             <span class="closebtn"></span>
