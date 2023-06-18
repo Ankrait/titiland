@@ -40,6 +40,8 @@ let btn8 = document.querySelector(".btn.warn");
 let block8 = document.querySelector(".warning");
 let btn9 = document.querySelector(".btn.connect");
 let block9 = document.querySelector(".connection");
+let btn10 = document.querySelector(".btn.tutor");
+let block10 = document.querySelector(".tutorial");
 openFunc(btn1, block1);
 openFunc(btn2, block2);
 openFunc(btn3, block3);
@@ -49,6 +51,7 @@ openFunc(btn6, block6);
 openFunc(btn7, block7);
 openFunc(btn8, block8);
 openFunc(btn9, block9);
+openFunc(btn10, block10);
 
 let close1 = block2.querySelector(".closebtn");
 close1.addEventListener("click", () => {
@@ -77,4 +80,8 @@ close6.addEventListener("click", () => {
 let close7 = block9.querySelector(".closebtn");
 close7.addEventListener("click", () => {
     block9.classList.add("dn");
+})
+let close8 = block10.querySelector(".btn");
+close8.addEventListener("click", () => {
+    block10.classList.add("dn");
 })
